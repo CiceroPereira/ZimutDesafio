@@ -1,0 +1,47 @@
+<% include partials/header.ejs %>
+    <div class="table-wrapper">
+        <% if (pessoas.lengh != 0) {%>
+            <table class="table table-hovered table-striped">
+                <thead >
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Data de Nascimento</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">CEP</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Complemento</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% pessoas.forEach((pessoa, index) => { %>
+                        <tr>
+                            <td><%= pessoa.name %></td>
+                            <td><%= pessoa.datanasc %></td>
+                            <td><%= pessoa.cpf %></td>
+                            <td><%= pessoa.cep %></td>
+                            <td><%= pessoa.endereco %></td>
+                            <td><%= pessoa.numero %></td>
+                            <td><%= pessoa.bairro %></td>
+                            <td><%= pessoa.cidade %></td>
+                            <td><%= pessoa.estado %></td>
+                            <td><%= pessoa.complemento %></td>
+                            <td>
+                                <a href="/edit/<%= pessoa.id_bin %>"  class="btn btn-sm btn-success">Edit</a>
+                                <a href="/delete/<%= pessoa.id_bin %>" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p class="text-center">Nenhum registro encontrado. Clique<a href="/add" > aqui</a> para adicionar pessoas.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
