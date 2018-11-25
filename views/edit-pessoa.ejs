@@ -38,8 +38,11 @@
 
             <div class="form-row">
                  <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Cidade" value="<%= pessoa.cidade %>" required>
+                </div>
+                <div class="form-group col-md-4">
                  <select required id="estado" name="estado" class="form-control">
-                        <option value="">Escolha o estado</option>
+                        <option value="<%= pessoa.estado %>"><%= pessoa.estado %></option>
                         <option value="Acre">Acre</option>
                         <option value= "Alagoas">Alagoas</option>
                         <option value="Amapá">Amapá</option>
@@ -68,9 +71,6 @@
                         <option value="Tocantins">Tocantins</option>
                         
                     </select>
-                </div>
-                 <div class="form-group col-md-4">
-                    <input type="text" class="form-control" name="estado" id="estado" placeholder="Estado" value="<%= pessoa.estado %>"required>
                 </div>
                 <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="complemento" id="complemento" placeholder="Complemento" value="<%= pessoa.complemento %>">
