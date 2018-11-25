@@ -3,7 +3,7 @@ Desafio para seleção de estágio Zimut
 
 Pré Requesitos:
   - Ter node instalado em sua máquina
-  - Utilizar PhpMyAdmin(foi usado o xampp durante o desenvolvimento)
+  - Utilizar PhpMyAdmin(foi usado o xampp durante o desenvolvimento), apache e MySql deverão ser startados 
 
 Comandos usados durante a configuração do projeto:
 
